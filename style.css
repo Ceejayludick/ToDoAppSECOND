@@ -77,10 +77,11 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background-color:darkslateblue;
   padding: 30px 40px;
   color: white;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Clear floats after the header */
