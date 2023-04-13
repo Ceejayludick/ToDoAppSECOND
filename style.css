@@ -13,11 +13,7 @@
 }
 
 /* CSS Media Queries for phone compatibility */
-@media only screen and (max-width: 768px) {
-  [class*="col-"] {
-    width: 100%;
-  }
-}
+
 
 .app {
   margin: 0px;
@@ -25,12 +21,14 @@
   border-radius: 30px;
 }
 
+/* CSS Media Queries for phone compatibility */
 @media (max-width:768px) {
   .app {
     width: 90%;
   }
 }
 
+/* styling for heading 1 at top of page */
 .app h1 {
   color: white;
   font-size: 20px;
@@ -41,36 +39,38 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* styling for the overall form */
 .app form {
   display: flex;
   width: 100%;
-  background-color: darkslateblue;
+  background-color:cornflowerblue;
   border-radius: 50px;
 }
 
+/* styling for the form input where users at tasks */
 .app form input {
   border: none;
   border-radius: 10px;
-  background-color: darkslateblue;
+  background-color: rgb(89, 203, 27);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: white;
+  color: rgb(254, 254, 254);
   padding: 10px;
   width: 75%;
- 
- 
 }
 
+/* styling for the button to add tasks */
 .app form button {
   border: none;
   padding: 10px;
-  color: rgb(91, 153, 224);
-  background-color: #d9d9d9;
+  background-color:darkslateblue;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   height: 42px;
   width: 25%;
   border-radius: 10px;
-  
 }
+
 
 .app ul {
   list-style: none;
@@ -80,8 +80,9 @@
 
 .app ul li {
   padding: 10px;
-  background-color: #262e4c;
+  background-color: darkslateblue;
   border-bottom: 1px solid #3a4674;
+  border-radius: 30px;
 }
 
 .check {
@@ -120,7 +121,8 @@
   color: rgb(255, 82, 82);
 }
 
+
 .completed {
-  color: rgba(192, 192, 192, 0.8);
-  text-decoration: line-through;
+  color: whitesmoke;
+  text-decoration:line-through;
 }
