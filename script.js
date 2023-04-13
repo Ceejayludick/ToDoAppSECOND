@@ -28,11 +28,11 @@ function addTask() {
   const task = document.querySelector("form input");
   const list = document.querySelector("ul");
   if (task.value === "") {
-    alert("Please add some task!");
+    alert("you havent added anything!");
     return false;
   }
   if (document.querySelector(`input[value="${task.value}"]`)) {
-    alert("Task already exist!");
+    alert("Error!");
     return false;
   }
 

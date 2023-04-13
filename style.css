@@ -6,18 +6,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e1e3ea;
-  height: 100vh;
+  background-color:cornflowerblue;
   font-family: sans-serif;
+  height: 100vh;
   background: url(cool-background.png);
 }
 
-
+/* CSS Media Queries for phone compatibility */
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
 
 .app {
-  margin-top: 50px;
-  width: 60%;
-
+  margin: 0px;
+  padding: 30px 40px;
+  border-radius: 30px;
 }
 
 @media (max-width:768px) {
