@@ -2,7 +2,28 @@
 window.onload = loadTasks;
 
 
-// code to add a new task
+// code to make a delete/close button for every list item
+var myNodelist = document.getElementsByTagName("li");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// code to press close/delete on list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// js code to add to list when user types in 'type here'
 document.querySelector("form").addEventListener("submit", e => {
   e.preventDefault();
   addTask();
@@ -107,23 +128,3 @@ function editTask(event) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("li");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
