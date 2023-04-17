@@ -4,10 +4,35 @@
 }
 
 /* CSS Media Queries for phone compatibility */
-@media (max-width:768px) {
+@media only screen and (max-width:768px) {
   .app {
     width: 90%;
   }
+}
+
+/* styling the body/container for the app and choosing background*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:cornflowerblue;
+  font-family: sans-serif;
+  height: 100vh;
+  background: url(cool-background.png);
+}
+
+/* general styling for the added list items */
+.app ul {
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.app ul li {
+  padding: 10px;
+  background-color: #56609e;
+  border-bottom: 1px solid #3a4674;
+  border-radius: 30px;
 }
 
 /* Remove margins and padding from the list */
@@ -21,19 +46,9 @@ ul {
   cursor: pointer;
 }
 
+/* make the listed items background colour change on hovering over it */
 .app ul li i:hover {
   color: white;
-}
-
-/* styling the container for the app*/
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color:cornflowerblue;
-  font-family: sans-serif;
-  height: 100vh;
-  background: url(cool-background.png);
 }
 
 .app {
@@ -49,7 +64,7 @@ ul {
   padding: 10px 0;
   text-align: center;
   border-radius: 30px;
-  background-color:darkslateblue;
+  background-color: darkblue;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -65,10 +80,10 @@ ul {
 .app form input {
   border: none;
   border-radius: 10px;
-  background-color: rgb(89, 203, 27);
+  background-color: #40dfaa;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: rgb(254, 254, 254);
+  color: white;
   padding: 10px;
   width: 75%;
 }
@@ -83,21 +98,9 @@ ul {
   height: 42px;
   width: 25%;
   border-radius: 10px;
-}
-
-
-.app ul {
-  list-style: none;
   color: white;
-  padding: 0;
 }
 
-.app ul li {
-  padding: 10px;
-  background-color: darkslateblue;
-  border-bottom: 1px solid #3a4674;
-  border-radius: 30px;
-}
 
 /* add a "checked" mark when clicked on */
 .check {
