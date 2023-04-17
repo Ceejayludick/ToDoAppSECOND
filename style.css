@@ -1,7 +1,31 @@
+/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
+/* CSS Media Queries for phone compatibility */
+@media (max-width:768px) {
+  .app {
+    width: 90%;
+  }
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.app ul li i {
+  float: right;
+  cursor: pointer;
+}
+
+.app ul li i:hover {
+  color: white;
+}
+
+/* styling the container for the app*/
 .container {
   display: flex;
   flex-direction: column;
@@ -12,20 +36,10 @@
   background: url(cool-background.png);
 }
 
-/* CSS Media Queries for phone compatibility */
-
-
 .app {
   margin: 0px;
   padding: 30px 40px;
   border-radius: 30px;
-}
-
-/* CSS Media Queries for phone compatibility */
-@media (max-width:768px) {
-  .app {
-    width: 90%;
-  }
 }
 
 /* styling for heading 1 at top of page */
@@ -74,7 +88,7 @@
 
 .app ul {
   list-style: none;
-  color: #e0e0e0;
+  color: white;
   padding: 0;
 }
 
@@ -85,6 +99,7 @@
   border-radius: 30px;
 }
 
+/* add a "checked" mark when clicked on */
 .check {
   width: 0.8em;
   height: 0.8em;
@@ -99,30 +114,34 @@
   background-color: #1dd2af;
 }
 
+/* styling the items added to task list */
 .task {
   font-size: 18px;
   padding: 0 10px;
   width: fit-content;
   background: transparent;
   border: none;
-  color: #fff;
+  color: white;
 }
 
 .task:focus {
   outline: none;
 }
 
-.app ul li i {
-  float: right;
-  cursor: pointer;
-}
-
-.app ul li i:hover {
-  color: rgb(255, 82, 82);
-}
-
-
+/* styling the option to cross through finished li */
 .completed {
   color: whitesmoke;
   text-decoration:line-through;
 }
+
+/* styling the delete items option */
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #bbb;}

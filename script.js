@@ -128,3 +128,25 @@ function editTask(event) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+// code to sort the items of list alphabetically 
+const doSort = (todos) => {
+  return todos
+  .sort((a, b) => {
+    if (a.value > b.value) { return 1; }
+    if (a.value < b.value) { return -1; }
+    return 0;
+  })
+}
+
+document.querySelector('#Add').addEventListener('submit', () => {
+
+  const data = document.querySelector('#inputId');
+  todos.push(data.value);
+  var mapped = todos.map(
+    (el, i) => ({ index: i, value: el.toLowerCase() })
+  );
+
+  const sortedTodos = doSort(mapped)
+  .map(el => todos[el.index]);
+}
+)
