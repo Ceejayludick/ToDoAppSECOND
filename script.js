@@ -147,6 +147,6 @@ document.querySelector('#Add').addEventListener('submit', () => {
   );
 
   const sortedTodos = doSort(mapped)
-  .map(el => todos[el.index]);
+  
 }
 )
